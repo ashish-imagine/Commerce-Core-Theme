@@ -1,0 +1,46 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor & IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node / build artifacts
+node_modules/
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+# Composer (if used later)
+vendor/
+
+# WordPress noise
+uploads/
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+
+# WooCommerce sessions & temp
+wc-logs/
+woocommerce.log
+
+# Compiled CSS (if using SCSS)
+assets/css/*.map
+
+# Tests / temp
+tmp/
+temp/
