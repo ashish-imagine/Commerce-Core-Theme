@@ -1,9 +1,18 @@
 <?php
-defined('ABSPATH') || exit;
 
-add_action('after_setup_theme', function(){
-  
-    load_theme_domain('commerce-core', THEME_PATH . '/languages');
+namespace Commerce\setup;
+
+class ThemeSetup {
+
+
+    public function init():void{
+    add_action('after_setup_theme', [$this, 'setupTheme']);
+
+    }
+
+    public function setupTheme(){
+
+        load_theme_domain('commerce-core', THEME_PATH . '/languages');
 
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -21,4 +30,6 @@ add_action('after_setup_theme', function(){
         'primary' => __('Primary Menu', 'commerce-core'),
         'footer' => __('Footer Menu', 'commerce-core'),
     ]);
-});
+    }
+
+}

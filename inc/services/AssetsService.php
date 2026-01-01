@@ -1,8 +1,15 @@
 <?php
 
-defined('ABSPATH') || exit;
+namespace Commerce\services;
 
-add_action('wp_enqueue_scripts', function(){
+class AssetsServices{
+
+public function init ():void{
+    add_action('wp_enqueue_scripts', [$this, 'registerAssets'] );
+
+}
+
+public function registerAssets():void{
     wp_enqueue_style(
         'commerce-core',
         PARENT_URL . '/assets/css/main.css',
@@ -19,4 +26,6 @@ add_action('wp_enqueue_scripts', function(){
 
         );
     }
-});
+}
+
+}
